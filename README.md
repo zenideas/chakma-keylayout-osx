@@ -7,6 +7,10 @@ After the above change, you'll see the Chakma Layout in the menus like below:
 
 ![Input Sources Menu](http://i.stack.imgur.com/0SLce.png)
 
+This is how the keylayout looks like:
+
+![Chakma Layout](http://i.imgur.com/Z8bXPyJ.png)
+
 
 ### Modify the layout ###
 
