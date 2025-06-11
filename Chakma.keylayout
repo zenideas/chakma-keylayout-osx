@@ -926,6 +926,11 @@
         </keyMap>
     </keyMapSet>
     <actions>
+<!-- Vowel Sign E (𑄬) modifies next consonant -->
+<action id="𑄬">
+  <when state="none" next="𑄬"/>
+  <when state="𑄬" output="𑄬"/>
+</action>
         <action id="&#x11128;">
             <when state="none" output="&#x11128;"/>
             <when state="&#x11133;" output="&#x11104;"/>
@@ -966,6 +971,29 @@
             <when state="none" next="&#x11133;"/>
             <when state="&#x11133;" output="&#x11133;"/>
         </action>
+<actions>
+  <!-- Vowel Sign A (𑄧) -->
+  <action id="𑄧">
+    <when state="none" next="𑄧"/>
+    <when state="𑄧" output="𑄧"/>
+  </action>
+  
+  <!-- Vowel Sign E (𑄬) -->
+  <action id="𑄬">
+    <when state="none" next="𑄬"/>
+    <when state="𑄬" output="𑄬"/>
+  </action>
+  
+  <!-- Consonant + Vowel E -->
+  <action id="𑄇"> <!-- Ka -->
+    <when state="none" output="𑄇"/>
+    <when state="𑄬" output="𑄇𑄬"/>
+  </action>
+</actions>
+<terminators>
+  <when state="𑄧" output="𑄧"/>
+  <when state="𑄬" output="𑄬"/>
+</terminators>
     </actions>
     <terminators>
         <when state="&#x11133;" output="&#x11133;"/>
